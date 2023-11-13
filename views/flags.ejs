@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Learn Flags</title>
+  <link rel="stylesheet" href="/styles/main.css">
+</head>
+<body>
+  <div class="container1">
+    <h1>Learn Flags</h1>
+    <form class="container" action="/learn-flags/submit" method="post">
+        <div class="horizontal-container">
+          <h3>
+            Total Score:
+            <span id="score">
+              <%= locals.totalScore ? totalScore : "0" %>
+            </span>
+            mistake:
+            <span id="score">
+              <%= locals.totalMistake ? totalMistake : "0" %>
+            </span>
+          </h3>
+    
+        </div>
+    
+        <h1 id="countryName">
+            <img src="data:image/png;base64,<%= locals.data %>" alt="Flag" id="flagImage">
+        </h1>
+        <div class="answer-container">
+          <input type="text" name="answer" id="userInput" placeholder="Enter the capital" autofocus autocomplete="off">
+        </div>
+        <button type="submit">SUBMIT</button>
+
+        <% if (locals.wasCorrect === false) { %>
+            <div id="incorrectMessage" class="incorrect-message">Not correct</div>
+          <% } %>
+    </form>
+
+      <script>
+        if (document.getElementById('incorrectMessage')) {
+            setTimeout(function() {
+            document.getElementById('incorrectMessage').style.display = 'none';
+          }, 2000);
+        }
+      </script>
+</body>
+</html>

@@ -1,0 +1,113 @@
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color:#8BC6EC; /* Or any other background color you prefer */
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh; /* This makes sure that the body is at least the height of the viewport */
+}
+
+.container1 {
+  width: 80%; /* Adjust the width as needed */
+  max-width: 800px; /* This will make sure that the container does not exceed 800px */
+  padding: 40px;
+  text-align: center;
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px; /* Adds rounded corners to the container */
+}
+h1 {
+  color: #0275d8;
+  margin-bottom: 0.5em; /* Adds some space below the heading */
+}
+
+h2 {
+  color: #5bc0de;
+  font-size: 1em;
+  margin-bottom: 2em; /* Adds more space below the subheading */
+}
+
+.menu {
+  display: flex;
+  flex-direction: column; /* This will stack the buttons on top of each other */
+  align-items: center; /* This will center the buttons horizontally */
+}
+
+.learn-button {
+  background-color: #5cb85c;
+  color: white;
+  border: none;
+  padding: 15px 30px;
+  margin: 10px ;
+  border-radius: 5px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s; /* Adds a transform transition */
+  width: 200px;
+}
+
+.learn-button:hover {
+  background-color: #449d44;
+  transform: translateY(-2px); /* Slightly raise the button when hovered */
+}
+
+@media (max-width: 600px) {
+  .container1 {
+    margin: 20px;
+    width: 90%; /* Makes the container take more space on smaller screens */
+  }
+
+  .learn-button {
+    padding: 15px; /* Adjusts padding for smaller screens */
+  }
+}
+
+/*for the index.ejs*/
+
+
+
+#countryName {
+  font-size: 2rem;
+  color: #0275d8;
+  margin: 20px 0;
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+button[type="submit"] {
+  background-color: #5cb85c;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin: 20px 0;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+button[type="submit"]:hover {
+  background-color: #4cae4c;
+}
+
+.horizontal-container {
+  position: absolute;
+  bottom: 10px; /* Position at the bottom */
+  width: 100%; /* Match the width of the container */
+  text-align: center;
+}
+
+.horizontal-container h3 {
+  font-size: 0.9rem;
+  color: #666;
+  margin: 0;
+}
+
